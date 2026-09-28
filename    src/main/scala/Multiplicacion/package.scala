@@ -25,7 +25,7 @@ package object Multiplicacion {
   }
 
   //devuelve la multiplicacion de dos enteros recursivos usando el SplitAlgorithm
-  def SplitMultiply(x: Int, y: Int): Int = {
+  def splitMultiply(x: Int, y: Int): Int = {
     if (x<10 && y<10) x*y
 
     else {
@@ -41,10 +41,10 @@ package object Multiplicacion {
       val b1=y/pot
       val b0=y%pot
 
-      val m1= SplitMultiply(a1, b1)
-      val m2= SplitMultiply(a0, b1)
-      val m3= SplitMultiply(a1, b0)
-      val m4= SplitMultiply(a0, b0)
+      val m1= splitMultiply(a1, b1)
+      val m2= splitMultiply(a0, b1)
+      val m3= splitMultiply(a1, b0)
+      val m4= splitMultiply(a0, b0)
 
       pot2*m1+pot*(m2+m3)+m4
     }
