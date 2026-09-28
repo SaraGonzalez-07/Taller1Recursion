@@ -5,7 +5,7 @@ package object Multiplicacion {
   //Version recursiva lineal del PeasantAlgorithm para multiplicar dos enteros positivos
   def PeasantAlgorithm(x: Int, y: Int): Int = {
     def peasantRecur (a:Int, b:Int):Int={
-      
+
       if (a==0)0
       else if (a%2==0)PeasantAlgorithm (a/2, b+b)
       else PeasantAlgorithm (a/2, b+b)+b
@@ -30,21 +30,21 @@ package object Multiplicacion {
 
     else {
 
-      val n = math.max(x.toString.length, y.toString.length)
-      val m = n / 2
-      val pot = math.pow(10, m).toInt
+      val n=math.max(x.toString.length, y.toString.length)
+      val m=n/2
+      val pot=math.pow(10, m).toInt
       //potencia de 10 donde 10 esta elevado a 2*m
-      val pot2 = math.pow(10, 2 * m).toInt
+      val pot2=math.pow(10, 2*m).toInt
 
-      val a1 = x / pot
-      val a0 = x % pot
-      val b1 = y / pot
-      val b0 = y % pot
+      val a1=x/pot
+      val a0=x%pot
+      val b1=y/pot
+      val b0=y%pot
 
-      val m1 = SplitMultiply(a1, b1)
-      val m2 = SplitMultiply(a0, b1)
-      val m3 = SplitMultiply(a1, b0)
-      val m4 = SplitMultiply(a0, b0)
+      val m1= SplitMultiply(a1, b1)
+      val m2= SplitMultiply(a0, b1)
+      val m3= SplitMultiply(a1, b0)
+      val m4= SplitMultiply(a0, b0)
 
       pot2*m1+pot*(m2+m3)+m4
     }
