@@ -1,4 +1,11 @@
-
+/** Taller1: Recursión
+ *
+ * @author Margareth Sophya Gamboa Izquierdo
+ * 2518629-3743
+ * @author Sara Michelle González Posso
+ * 2519548-3743
+ *
+ */
 
 package object Multiplicacion {
 
@@ -55,7 +62,7 @@ package object Multiplicacion {
   def fastMultiply(x: Int, y: Int): Int = {
 
     // caso base, si ambos numeros son de un solo digito se multiplican directamente
-    if (x < 10 && y < 10) x * y
+    if (x<10 && y<10) x*y
 
     else {
       val n = math.max(x.toString.length, y.toString.length)
@@ -73,13 +80,14 @@ package object Multiplicacion {
       val diffAabs = math.abs(diffA)
       val diffBabs = math.abs(diffB)
 
-      //aqui se maneja el signo de la resta
-      val sign = diffA.sign*diffB.sign
-
       val p1 = fastMultiply(a1, b1)
       val p2 = fastMultiply(a0, b0)
       val p3 = fastMultiply(diffAabs, diffBabs)
-      val p3signed = p3*sign
+
+      val p3signed =
+        if ((diffA < 0 && diffB > 0) || (diffA > 0 && diffB < 0)) -p3
+        else if (diffA == 0 || diffB == 0) 0
+        else p3
 
       pot*pot*p1+pot*(p1+p2-p3signed)+p2
     }

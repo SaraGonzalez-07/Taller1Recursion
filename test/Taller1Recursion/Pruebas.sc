@@ -18,9 +18,9 @@ PeasantAlgorithmIt(10,7)
 PeasantAlgorithmIt(0,0)
 
 // Pruebas de SplitMultiply
-splitMultiply(4,5)
-splitMultiply(2145,3233)
-splitMultiply(14,32)
+SplitMultiply(4,5)
+SplitMultiply(2145,3233)
+SplitMultiply(14,32)
 
 // Pruebas de fastMultiply
 fastMultiply(4,5)
