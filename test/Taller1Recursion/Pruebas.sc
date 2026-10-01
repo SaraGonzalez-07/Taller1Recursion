@@ -4,6 +4,12 @@ PeasantAlgorithm(5,2)
 PeasantAlgorithm(7,3)
 PeasantAlgorithm(8,4)
 PeasantAlgorithm(2145,3233)
+// Pruebas para el taller
+PeasantAlgorithm(0,22)
+PeasantAlgorithm(5,1)
+PeasantAlgorithm(82,96)
+PeasantAlgorithm(75,0)
+PeasantAlgorithm(4862,5623)
 
 // Pruebas de PeasantAlgorithmIt
 PeasantAlgorithmIt(5,2)
@@ -18,9 +24,15 @@ PeasantAlgorithmIt(10,7)
 PeasantAlgorithmIt(0,0)
 
 // Pruebas de SplitMultiply
-SplitMultiply(4,5)
-SplitMultiply(2145,3233)
-SplitMultiply(14,32)
+splitMultiply(4,5)
+splitMultiply(2145,3233)
+splitMultiply(14,32)
+// Pruebas para el taller
+splitMultiply(0,8)
+splitMultiply(515,416)
+splitMultiply(45,0)
+splitMultiply(2,4)
+splitMultiply(8961,1502)
 
 // Pruebas de fastMultiply
 fastMultiply(4,5)
